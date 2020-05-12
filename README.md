@@ -256,7 +256,7 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + *Example*:
 
 
-![image.png](attachment:image.png)
+![image.png](attachment:DOM Tree.PNG)
 
 + The above diagram demonstrates the parent and chaild relationship between the nodes
 + ``<head>`` abd ``<body>`` elements are teh child nodes of ``<html>``.It's a parent node

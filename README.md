@@ -25,6 +25,7 @@
 **JavaScript Identifiers :**
 
 + All JavaScript variables must be identied with Unique names(Identifiers)
+
 ![image.png](img1.png)
 
 + General Rules for constructiong variable names are:
@@ -47,13 +48,13 @@
     ```
     + Datatypes are basically type of data that can be used and manipulated in program
     + The latest ES6 has 7 data types. In those 7 data types 6 data types are premitive(predifined). i.e.,
-    ```+ **Numbers** : 1,2,3 etc.,
-    + **String** : "Hello Apssdc"
-    + **Boolean** : It represents a lodocal entity and have two values **True, False**
-    + **Null** : This typs has only one value
-    + **Undefined** : A variable has not been assigned value is Undifined
-    + **Object** : It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
-    ```
+      + **Numbers** : 1,2,3 etc.,
+      + **String** : "Hello Apssdc"
+      + **Boolean** : It represents a lodocal entity and have two values **True, False**
+      + **Null** : This typs has only one value
+      + **Undefined** : A variable has not been assigned value is Undifined
+      + **Object** : It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
+   
     
 
 #### Arrays:
@@ -94,13 +95,14 @@ console.log(a[i])
     + else if
     + switch
     
-+ **if**: It executes a specified code segment if the given condition is ``True``
++ **if**:  It executes a specified code segment if the given condition is ``True``
     + *Syntax*:
-    
       
+        ```javascript
         If(condition){
         //code execution
         }
+        ```
         
 + *Example*:
 ```var age=25;
@@ -113,8 +115,8 @@ console.log("valid");
 
     + *Syntax*:
     
-    
-    ```if (condition){
+    ```javascript
+    if (condition){
     //code to get executed when the condition is true
     }
     else{
@@ -134,6 +136,7 @@ console.log("not valid");
 + **Else if**: When the first condition fails, the else-if allows the program to specify some new condition(s).
 
     + *Syntax*:
+    ```javascript
     if (condition_one){
     //code to execute if condition_one is true
     }
@@ -143,7 +146,7 @@ console.log("not valid");
     else{
     //code to execute if the condition_one is false
     }
-    
+    ```
 + *Example*:
 ```if (marks > 90 && marks <= 100){
 grade = 'A+';
@@ -162,6 +165,7 @@ grade='fail';
 + **Switch**:The switch case statement has an expression which is compared with values of each case statement and if a match is found, the associated code is executed.
 
     + *Syntax*:
+    ```javascript
     switch(expression){
     case a:
     //block of code
@@ -169,6 +173,7 @@ grade='fail';
     case b:
     //block of code
     break;
+    ```
     
 #### Looping Statments:
 
@@ -183,9 +188,11 @@ grade='fail';
     
 + **while**: The while loop, loops through a block of code as long as the specified condition evaluates to true. As soon as the condition fails, the loop is stopped
     + *syntax*:
+    ```javascript
     while(condition) {
     // Code to be executed
     }
+    ```
 + *Example*:
 ```var a=1
 while(a<=10){
@@ -197,11 +204,12 @@ a++;
 + **do while**:The do-while loop is a variant of the while loop, which evaluates the condition at the end of each loop iteration. With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is repeated as long as the specified condition evaluated to is true. 
 
     + *syntax*:
+    ```javascript
     do {
     // Code to be executed
     }
     while(condition);
-    
+    ```
 + *Example*:
 ```var a=1
 do{
@@ -220,9 +228,11 @@ while(a<=10);
 + **for**:The for loop repeats a block of code as long as a certain condition is met. It is typically used to execute a block of code for certain number of times. Its syntax is:
 
     + *syntax*:
+    ```javascript
     for(initialization; condition; increment) {
     // Code to be executed
     }
+    ```
 
 + *Example*:
 ```for(var i=1; i<=5; i++) {
@@ -232,10 +242,11 @@ while(a<=10);
 + **for ..in**:loops through the properties of an object or the elements of an array.
 
     + *syntax*:
+    ```javascript
     for(variable in object) {
     // Code to be executed
     }
-    
+    ```
 + *Example*:
 ```var data=['apssdc','apssdc1','apssdc2','apssdc3']
 for (i in data){
@@ -245,10 +256,11 @@ console.log(data[i]);
 + **for ..of**:ES6 introduces a new **for ..of** loops over iterable objects such as arrays, strings, etc., Also, the code inside the loop is executed for each element of the iterable object
 
     + *syntax*:
+    ```javascript
     for(variable of object) {
     // Code to be executed
     }
-    
+    ```
 + *Example*:
 ```var a="APSSDC Welcome's you"
 for (i of a){
@@ -264,7 +276,6 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + DOM Tree depends on HTML
 
 + *Example*:
-
 
 ![image.png](DOM Tree.png)
 

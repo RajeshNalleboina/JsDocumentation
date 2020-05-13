@@ -18,8 +18,11 @@
 #### Variable:
 
 + Variable is used to storing the data values
-    + Ex: ```var x=10
-    `var y="APSSDC" or 'APSSDC'```
+    + Ex: 
+    ```
+    var x=10
+    var y="APSSDC" or 'APSSDC'
+    ```
 + JavaScript no print predifined functions available. If we print anything we can use ```console.log(<variable name>)```
 
 **JavaScript Identifiers :**
@@ -71,7 +74,8 @@
 
 **How to find the leagth,sorting of array in JS?**
 
-```console.log(<variable name>.lenght)
+```
+console.log(<variable name>.lenght)
 Ex:
 console.log(a.lenght)    //3 
 **length** is used to return the no of elements available in array
@@ -82,7 +86,8 @@ console.log(typeof(a))  //Object
 ```
 + If we can access all array values at a time use *for loop*
 
-```for (i in a){
+```
+for (i in a){
 console.log(a[i])
 }
 ```
@@ -105,7 +110,8 @@ console.log(a[i])
         ```
         
 + *Example*:
-```var age=25;
+```
+var age=25;
 if(age=>25){
 console.log("valid");
 }
@@ -148,7 +154,8 @@ console.log("not valid");
     }
     ```
 + *Example*:
-```if (marks > 90 && marks <= 100){
+```
+if (marks > 90 && marks <= 100){
 grade = 'A+';
 }
 elas if (marks > 80 && marks <= 90){
@@ -194,7 +201,8 @@ grade='fail';
     }
     ```
 + *Example*:
-```var a=1
+```
+var a=1
 while(a<=10){
 console.log(a);
 a++;
@@ -211,7 +219,8 @@ a++;
     while(condition);
     ```
 + *Example*:
-```var a=1
+```
+var a=1
 do{
 console.log(a);
 a++;
@@ -235,7 +244,8 @@ while(a<=10);
     ```
 
 + *Example*:
-```for(var i=1; i<=5; i++) {
+```
+for(var i=1; i<=5; i++) {
     console.log("Iteration "+i);
 }
 ```
@@ -248,7 +258,8 @@ while(a<=10);
     }
     ```
 + *Example*:
-```var data=['apssdc','apssdc1','apssdc2','apssdc3']
+```
+var data=['apssdc','apssdc1','apssdc2','apssdc3']
 for (i in data){
 console.log(data[i]);
 }
@@ -262,7 +273,8 @@ console.log(data[i]);
     }
     ```
 + *Example*:
-```var a="APSSDC Welcome's you"
+```
+var a="APSSDC Welcome's you"
 for (i of a){
 console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 }
@@ -311,7 +323,8 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + The above example we are creating **heading 2**  tag with some text on that it's appen to the root *ID*
 
 + i want to add a class/id to the **h2** tag
-```h2.classList.add("<classname>"); //add class name
+```
+h2.classList.add("<classname>"); //add class name
 h2.setAttribute("id/class","<id/class name>"); // add either class name or Id name
 ```
 + i want to apply some styles (like text color etc.,) to the h2 element
@@ -343,7 +356,8 @@ document.querySelectorAll("<.idname>/<.classname>/<tagname>") //Its used for get
 + BOM provides you with window object, for example, to show the width and height of the window. It also includes the window.screen object to show the width and height of the screen
 + JS BOM has types ```Window, Screen, Location, History, Dialogboxs, Timer```
 
-```document.write("Screen width: " + screen.width); //display the screen width
+```
+document.write("Screen width: " + screen.width); //display the screen width
 document.write("<br>Screen width: " + screen.height);  //display the screen height
 document.write("The URL of this page is: " + window.location.href); // it's used to find the eaxct page referance link
 ```
@@ -360,7 +374,8 @@ document.write("The URL of this page is: " + window.location.href); // it's used
 
 + if you are playing x game. When the game is over the page would be restart/refresh
 
-```function gameover() {
+```
+function gameover() {
     window.location.reload(true);
 }
 ```

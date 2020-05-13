@@ -1,7 +1,7 @@
 # JavaScript
 ---
 
-## Introduction:
+### Introduction:
 
 + JavaScript is one of the most popular programming language in the world
 + JavaScript was Invented by **Brendan Eich** in 1995 during has time at **Netscape Communication**
@@ -15,17 +15,17 @@
 + Many Desktops & server side programs are used JavaScript
 
 
-## Variable:
+#### Variable:
 
 + Variable is used to storing the data values
     + Ex: ```var x=10
-    var y="APSSDC" or 'APSSDC'```
+    `var y="APSSDC" or 'APSSDC'```
 + JavaScript no print predifined functions available. If we print anything we can use ```console.log(<variable name>)```
 
 **JavaScript Identifiers :**
 
 + All JavaScript variables must be identied with Unique names(Identifiers)
-![image.png](attachment:image.png)
+![image.png](img1.png)
 
 + General Rules for constructiong variable names are:
     + Names can contains Letters, Digits, Underscore, Doller symbols
@@ -34,22 +34,29 @@
     
 + datatypes are majorly two types of languages
     + Statically(c,c++, Java)
-        + ```int x=1
-        str y='xyz'```
+    ```JavaScript
+    int x=1
+    
+    str y="rajesh"
+    ```
     + Dynamically(JS, Python, Ruby etc.,)
-        + ```var x=1
-        var y='xyz'```
-        + Datatypes are basically type of data that can be used and manipulated in program
+    ```JavaScript
+    var x=1
+    
+    var y="rajesh"
+    ```
+    + Datatypes are basically type of data that can be used and manipulated in program
     + The latest ES6 has 7 data types. In those 7 data types 6 data types are premitive(predifined). i.e.,
-        + **Numbers** : 1,2,3 etc.,
-        + **String** : "Hello Apssdc"
-        + **Boolean** : It represents a lodocal entity and have two values **True, False**
-        + **Null** : This typs has only one value
-        + **Undefined** : A variable has not been assigned value is Undifined
-        + **Object** : It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
+    ```+ **Numbers** : 1,2,3 etc.,
+    + **String** : "Hello Apssdc"
+    + **Boolean** : It represents a lodocal entity and have two values **True, False**
+    + **Null** : This typs has only one value
+    + **Undefined** : A variable has not been assigned value is Undifined
+    + **Object** : It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
+    ```
     
 
-## Arrays:
+#### Arrays:
 
 + In general Array is a collection of logical related elements
 + JavaSctipt array is a special variable. It is used to store the multiple values at a time in a single variable
@@ -79,13 +86,14 @@ console.log(a[i])
 }
 ```
 
-## Conditional Statements:
+#### Conditional Statements:
 
 + The conditional statements include in the JS code assist with decision. Based on certain conditions. The conditional Statements are several types they are:
     + if
     + else
     + else if
     + switch
+    
 + **if**: It executes a specified code segment if the given condition is ``True``
     + *Syntax*:
     
@@ -105,12 +113,14 @@ console.log("valid");
 
     + *Syntax*:
     
-    if (condition){
+    
+    ```if (condition){
     //code to get executed when the condition is true
     }
     else{
     //code to get executed when the 'if' condition fails
     }
+    ```
     
 + *Example*:
 ```var age=25;
@@ -160,7 +170,7 @@ grade='fail';
     //block of code
     break;
     
-## Looping Statments:
+#### Looping Statments:
 
 + Loops are used to execute the same block of code again and again, as long as a certain condition is met
 + Loop is used to automate the repetitive tasks within a program to save the time and effort
@@ -256,7 +266,7 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + *Example*:
 
 
-![image.png](attachment:DOM Tree.PNG)
+![image.png](DOM Tree.png)
 
 + The above diagram demonstrates the parent and chaild relationship between the nodes
 + ``<head>`` abd ``<body>`` elements are teh child nodes of ``<html>``.It's a parent node
@@ -274,15 +284,80 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + If you are using external script to get into html use like this
 ```<script src="<external file name> ex: main.js"></script>```
 
- 
+#### DOM Manipulations:
+
+```<html>
+<body id='root'><body>
+
+<script>
+    var root=document.getElementById('root');
+    var h2=document.createElement("h2"); // creating h2 element
+    h2.textContent="Rajesh APSSDC"; //add some text 
+    root.appendChild(h2);
+    </script>
+```
+
++ The above example we are creating **heading 2**  tag with some text on that it's appen to the root *ID*
+
++ i want to add a class/id to the **h2** tag
+```h2.classList.add("<classname>"); //add class name
+h2.setAttribute("id/class","<id/class name>"); // add either class name or Id name
+```
++ i want to apply some styles (like text color etc.,) to the h2 element
+
+```javascript
+h2.style.color='red';
+```
++ i wnat creating one paragraph tag in html page and write some text in paragtaph tag using javascript as shown below
+
+```html
+<p id='p'></p>
+```
+
+```document.querySelector(".p").innerHTML="Hello APSSDC";```
+
+**How many ways to get html tag/class/id names in JS?**
+```javascript
+document.getElementById(<idname>)
+document.getElementByClassName(<classname>) 
+document.getElementByTagName(<tag name>) 
+document.querySelector("<.idname>/<.classname>/<tagname>")
+document.querySelectorAll("<.idname>/<.classname>/<tagname>") //Its used for getting multiple id/class/tag with same name
+```
 
 
-## BOM:
+## BOM(Browser Object Model):
 
-#### Alerts:
++ The Browser Object Model (BOM) in JavaScript includes the properties and methods for JavaScript to interact with the web browser
++ BOM provides you with window object, for example, to show the width and height of the window. It also includes the window.screen object to show the width and height of the screen
++ JS BOM has types ```Window, Screen, Location, History, Dialogboxs, Timer```
 
-###### Prompt:
+```javascript
+<script>
+         document.write("Screen width: " + screen.width); //display the screen width
+         document.write("<br>Screen width: " + screen.height);  //display the screen height
+document.write("The URL of this page is: " + window.location.href); // it's used to find the eaxct page referance link
+      </script>
+      ```
++ `alert` is used for display some alert message like popup box
+```alert("Hello apssdc")```
 
-###### Alert:
++ The prompt dialog box is used to prompt the user to enter information. A prompt dialog box includes a text input field, an OK and a Cancel button.
 
-###### Confirm:
+```prompt("What's your name?");```
+
++ A timer is a function that enables us to execute a function at a particular time
+    + Using timers you can delay the execution of code so that it does not get done at the exact moment an event is triggered or the page is loaded. For example, you can use timers to change the advertisement banners on your website at regular intervals, or display a real-time clock, etc. There are two timer functions in JavaScript: ``setTimeout(function, milliseconds)`` and ``setInterval(function, milliseconds)``
+
++ if you are playing x game. When the game is over the page would be restart/refresh
+
+```function gameover() {
+    window.location.reload(true);
+}
+```
+
++ ```javascript
+window.history.back(); // its used for get back to previos pagewindow.history.go(0); // its used to reload the current page
+window.history.forward(); // its used to navigate for next page
+```
++ If you attempt to access the page that does not exist in the window's history then the methods back(), forward() and go() will simply do nothing

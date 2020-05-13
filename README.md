@@ -343,13 +343,11 @@ document.querySelectorAll("<.idname>/<.classname>/<tagname>") //Its used for get
 + BOM provides you with window object, for example, to show the width and height of the window. It also includes the window.screen object to show the width and height of the screen
 + JS BOM has types ```Window, Screen, Location, History, Dialogboxs, Timer```
 
-```javascript
-<script>
-         document.write("Screen width: " + screen.width); //display the screen width
-         document.write("<br>Screen width: " + screen.height);  //display the screen height
+```document.write("Screen width: " + screen.width); //display the screen width
+document.write("<br>Screen width: " + screen.height);  //display the screen height
 document.write("The URL of this page is: " + window.location.href); // it's used to find the eaxct page referance link
-      </script>
-      ```
+```
+    
 + `alert` is used for display some alert message like popup box
 ```alert("Hello apssdc")```
 
@@ -367,8 +365,7 @@ document.write("The URL of this page is: " + window.location.href); // it's used
 }
 ```
 
-+ ```javascript
-window.history.back(); // its used for get back to previos pagewindow.history.go(0); // its used to reload the current page
+```window.history.back(); // its used for get back to previos pagewindow.history.go(0); // its used to reload the current page
 window.history.forward(); // its used to navigate for next page
 ```
 + If you attempt to access the page that does not exist in the window's history then the methods back(), forward() and go() will simply do nothing

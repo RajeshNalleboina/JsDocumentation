@@ -3,27 +3,86 @@
 
 ### Introduction:
 
-+ JavaScript is one of the most popular programming language in the world
-+ JavaScript was Invented by **Brendan Eich** in 1995 during has time at **Netscape Communication**
-+ It was inspired by Java, scheme & self
++ JavaScript is the most popular and widely used for client-side scripting language
++ Client-side scripting refers to scripts that run within your web browser
++ JavaScript is designed to add interactivity and dynamic effects to the web pages by manipulating the content
++ JavaScript was Invented by **Brendan Eich** during has time at **Netscape Communication**
++ JavaScript was originally developed as LiveScript by Netscape in the mid 1990s
 + It's first name is Netscape's Mocha. It's not much more popular. At that time Java is most popular programming language
-+ He desided to change the language name Mocha to JavaScript
-+ Netscape submitted JavaScript to International Standard Company ECMA. Then JS changed to ECMAScript
-+ The starting point for a standard specification that all browser vendors could conform the ECMAScript in 1997 
-+ It provides client side scripting on the webpages
-+ It is used to design web pages with high sceurity
-+ Many Desktops & server side programs are used JavaScript
++ He desided to change the language name Mocha to JavaScript in 1995, and became an ECMA(European Computer Manufactures Association) standard in 1997.
++  Now JavaScript is the standard client-side scripting language for web-based applications and Now it is supported by all web browsers available today, such as Google Chrome, Mozilla Firefox, Apple Safari, etc.
 
++ It is an object-oriented language, and it also has some similarities in syntax to Java programming language. But, JavaScript is not related to Java in any way
+
+
+## What You Can Do with JavaScript?
+
++ You can modify the content of a web page by adding or removing elements
+
++ You can change the style and position of the elements on a web page
+
++ You can monitor events like mouse click, hover, etc. and react to it
+
++ You can perform and control transitions and animations
+
++ You can create alert pop-ups to display info or warning messages to the user
+
++ You can validate user inputs before submitting it to the server
 
 #### Variable:
 
-+ Variable is used to storing the data values
-    + Ex: 
-    ```
++ Variables are fundamentals to all programming languages
++ Variable is used to storing the data like strings, numbers etc.,
+
+* Syntax:
+```var varName = value;```
+ 
+    ```javascript
     var x=10
     var y="APSSDC" or 'APSSDC'
+    var z=true;
     ```
++ In JavaScript, variables can also be declared without having any initial values assigned to them. This is useful for variables which are supposed to hold values like user inputs
+
+```javascript
+// Declaring Variable
+var userName;
+ 
+// Assigning value
+userName = "APSSDC";
+```
++ **Note:** In JavaScript, if a variable has been declared, but has not been assigned a value explicitly, is automatically assigned the value undefined.
+
 + JavaScript no print predifined functions available. If we print anything we can use ```console.log(<variable name>)```
+
+#### Declaring Multiple Variables At Once:
+
++ In addition, you can also declare multiple variables and set their initial values in a single statement. Each variable are separated by commas, as demonstrated in the following example:
+
+```javascript
+// Declaring multiple Variables
+var name = "Peter Parker", age = 21, isMarried = false;
+ 
+/* Longer declarations can be written to span
+multiple lines to improve the readability */
+var name = "APSSDC",
+age = 21,
+isMarried = false;
+```
++ **let & const** for declearing variables & it's **ES6** properties
+
++ Unlike var, which declare function-scoped variables, both let and const keywords declare variables, scoped at block-level ({}), Block scoping means that a new scope is created between a pair of curly brackets {}.
+
+```javascript
+// let
+let a=10
+// Declaring constant
+const PI = 3.14;
+console.log(PI); // 3.14
+
+// Trying to reassign
+PI = 10; // error
+```
 
 **JavaScript Identifiers :**
 
@@ -31,11 +90,28 @@
 
 ![image.png](img1.png)
 
-+ General Rules for constructiong variable names are:
-    + Names can contains Letters, Digits, Underscore, Doller symbols
-    + Name must begin with letters, Unsderscore & Doller symbol
-    + Variable names are case sensitive
-    
+**General Rules for constructiong variable names are:**
+
++ A variable name must start with a letter, underscore (_), or dollar sign ($)
++ A variable name cannot start with a number.
++ A variable name can only contain alpha-numeric characters (A-z, 0-9) and underscores.
++ A variable name cannot contain spaces.
++ Variable names are case sensitive 
+
+### Generating Output in JavaScript
+
++ In JavaScript there are several different ways of generating output including writing output to the browser window or browser console, displaying output in dialog boxes, writing output into an HTML element, etc.,
+
+```javascript
+console.log("hello");
+// Displaying o/p alert Dialog Box
+alert("Hello World!"); // Outputs: Hello World!
+// Displaying o/p to  the browser window
+document.write("Hello World!"); // Prints: Hello World!
+
+```
+## Data Types
+
 + datatypes are majorly two types of languages
     + Statically(c,c++, Java)
     ```JavaScript
@@ -51,16 +127,84 @@
     ```
     + Datatypes are basically type of data that can be used and manipulated in program
     + The latest ES6 has 7 data types. In those 7 data types 6 data types are premitive(predifined). i.e.,
-      + **Numbers** : 1,2,3 etc.,
-      + **String** : "Hello Apssdc"
-      + **Boolean** : It represents a lodocal entity and have two values **True, False**
-      + **Null** : This typs has only one value
-      + **Undefined** : A variable has not been assigned value is Undifined
-      + **Object** : It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
-   
-    
 
-#### Arrays:
+      + **Numbers** : The number data type is used to represent positive or negative numbers with or without decimal place, or numbers written using exponential notation e.g. 1.5e-4
+      ```javascript
+      var a = 25;         // integer
+        var b = 80.5;       // floating-point number
+        var c = 4.25e+6;    // exponential notation, same as 4.25e6 or 4250000
+        var d = 4.25e-6;    // exponential notation, same as 0.00000425 
+      ```
+        + The Number data type also includes some special values which are: Infinity, -Infinity and NaN(Not a Number).
+
+        ```javascript
+        alert(16 / 0);  // Output: Infinity
+        alert(-16 / 0); // Output: -Infinity
+        alert("Some text" / 2);       // Output: NaN
+        ```
+
+      + **String** : The string data type is used to represent textual data. it's created using single/double quotes
+
+      ```javascript
+      var a = "Let's have a cup of coffee."; // single quote inside double quotes
+      var b = 'He said "Hello" and left.';  // double quotes inside single quotes
+      var c = 'We\'ll never give up.';     // escaping single quote with backslash
+
+      ```
+      + **Boolean** : The Boolean data type can hold only two values: **true or false**. It is typically used to store values like **yes (true) or no (false), on (true) or off (false)**, etc.
+
+      ```javascript
+        var a = 2, b = 5, c = 10;
+        alert(b > a) // Output: true
+        alert(b > c) // Output: false
+      ```
+
+      + **Undefined** :  If a variable has been declared, but has not been assigned a value, has the value undefined
+
+      ```javascript
+        var a;
+        var b = "Hello World!"
+        
+        alert(a) // Output: undefined
+        alert(b) // Output: Hello World!
+      ```
+
+      + **Null** : A `null` value means that there is no value. It is not equivalent to an empty string `("")` or `0`, it is simply nothing
+
+      ```javascript
+        var a = null;
+        alert(a); // Output: null
+      ```
+      + **Object** : The object is a complex data type that allows you to store collections of data(it's key-value pair).
+        + It has most important data type and forms the bulding blocks for moders JS. we'll learn about this in future concepts
+      ```javascript
+      var car = {
+         modal: "AUDI",
+        color: "white",
+        doors: 5
+        }
+      ```
+    + **Array**: An array is a type of object used for storing multiple values in single variable.  Each value (also called an element) in an array has a numeric position, known as its index
+    
+    ```javascript
+    var colors = ["Red", "Yellow", "Green", "Orange"];
+    ```
+    + **Function**: The function is callable object that executes a block of code. Since functions are objects, so it is possible to assign them to variables
+
+    ```javascript
+    var greeting = function(){ 
+    return "Hello World!"; 
+    }
+    alert(greeting());
+    ```
++ **Typeof Operator**: he typeof operator can be used to find out what type of data a variable or operand contains. It can be used with or without parentheses `(typeof(x) or typeof x)`
+
+```javascript
+a=5
+typeof(a);  // Returns: "number"
+
+```
+<!-- #### Arrays:
 
 + In general Array is a collection of logical related elements
 + JavaSctipt array is a special variable. It is used to store the multiple values at a time in a single variable
@@ -70,23 +214,23 @@
 + Neither the length of a JavaScript array nor the types of its elements are fixed
 + An array's length can change at any time, and data can be stored at non-contiguous locations in the array
 
-```Ex: var a=['apssdc','ravi','rajesh']```
+```Ex: var a=['apssdc','ravi','rajesh']``` -->
 
 **How to find the leagth,sorting of array in JS?**
 
-```
+```javascript
 console.log(<variable name>.lenght)
-Ex:
-console.log(a.lenght)    //3 
-**length** is used to return the no of elements available in array
-console.log(a.sort()) // ['apssdc','rajesh','ravi']
-**sort()** is used to sorting the arrys values
-console.log(a[0])    //apssdc
-console.log(typeof(a))  //Object
+    Ex:
+    console.log(a.lenght)    //3 
+    **length** is used to return the no of elements available in array
+    console.log(a.sort()) // ['apssdc','rajesh','ravi']
+    **sort()** is used to sorting the arrys values
+    console.log(a[0])    //apssdc
+    console.log(typeof(a))  //Object
 ```
 + If we can access all array values at a time use *for loop*
 
-```
+```javascript
 for (i in a){
 console.log(a[i])
 }
@@ -110,7 +254,7 @@ console.log(a[i])
         ```
         
 + *Example*:
-```
+```javascript
 var age=25;
 if(age=>25){
 console.log("valid");
@@ -131,7 +275,8 @@ console.log("valid");
     ```
     
 + *Example*:
-```var age=25;
+```javascript
+var age=25;
 if(age<25){
 console.log("valid");
 }
@@ -154,7 +299,7 @@ console.log("not valid");
     }
     ```
 + *Example*:
-```
+```javascript
 if (marks > 90 && marks <= 100){
 grade = 'A+';
 }

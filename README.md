@@ -206,6 +206,16 @@ document.write("Hello World!"); // Prints: Hello World!
     }
     alert(greeting());
     ```
+
+    ```javascript
+    function ShowMessage() {
+			alert("Hello World!");
+		}
+
+        ShowMessage()=> {
+			alert("Hello World!");
+		}
+    ```
 + **Typeof Operator**: he typeof operator can be used to find out what type of data a variable or operand contains. It can be used with or without parentheses `(typeof(x) or typeof x)`
 
 ```javascript
@@ -615,4 +625,35 @@ window.history.forward(); // its used to navigate for next page
         ]
     }
     ```
+**AJAX:**
 
+```javascript
+(function(){
+    function loadJSON(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+        }
+      }
+      rawFile.send(null);
+    }
+    loadJSON ("index.json", function (text) {
+      let data = JSON.parse(text);
+      console.log(data);  
+    });
+    ```
+
+**Fetch API**:
+
+```javascript
+fetch('./index.json')
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+      console.log(data);
+  }
+  ```

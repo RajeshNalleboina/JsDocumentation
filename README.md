@@ -42,6 +42,15 @@
     var y="APSSDC" or 'APSSDC'
     var z=true;
     ```
+
+**General Rules for constructiong variable names are:**
+
++ A variable name must start with a letter, underscore (_), or dollar sign ($)
++ A variable name cannot start with a number.
++ A variable name can only contain alpha-numeric characters (A-z, 0-9) and underscores.
++ A variable name cannot contain spaces.
++ Variable names are case sensitive 
+
 + In JavaScript, variables can also be declared without having any initial values assigned to them. This is useful for variables which are supposed to hold values like user inputs
 
 ```javascript
@@ -89,14 +98,6 @@ PI = 10; // error
 + All JavaScript variables must be identied with Unique names(Identifiers)
 
 ![image.png](img1.png)
-
-**General Rules for constructiong variable names are:**
-
-+ A variable name must start with a letter, underscore (_), or dollar sign ($)
-+ A variable name cannot start with a number.
-+ A variable name can only contain alpha-numeric characters (A-z, 0-9) and underscores.
-+ A variable name cannot contain spaces.
-+ Variable names are case sensitive 
 
 ### Generating Output in JavaScript
 
@@ -326,6 +327,36 @@ grade='fail';
     //block of code
     break;
     ```
+**Example**:
+```javascript
+var d = new Date();
+switch(d.getDay()) {
+	case 0:
+		alert("Today is Sunday.");
+		break;
+	case 1:
+		alert("Today is Monday.");
+		break;
+	case 2:
+		alert("Today is Tuesday.");
+		break;
+	case 3:
+		alert("Today is Wednesday.");
+		break;
+	case 4:
+		alert("Today is Thursday.");
+		break;
+	case 5:
+		alert("Today is Friday.");
+		break;
+	case 6:
+		alert("Today is Saturday.");
+		break;   
+	default:
+		alert("No information available for that day.");
+		break;
+}
+```
     
 #### Looping Statments:
 
@@ -345,8 +376,8 @@ grade='fail';
     // Code to be executed
     }
     ```
-+ *Example*:
-```
+**Example**:
+```javascript
 var a=1
 while(a<=10){
 console.log(a);
@@ -356,15 +387,15 @@ a++;
 
 + **do while**:The do-while loop is a variant of the while loop, which evaluates the condition at the end of each loop iteration. With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is repeated as long as the specified condition evaluated to is true. 
 
-    + *syntax*:
++ **syntax**:
     ```javascript
     do {
     // Code to be executed
     }
     while(condition);
     ```
-+ *Example*:
-```
+**Example**:
+```javascript
 var a=1
 do{
 console.log(a);
@@ -389,7 +420,7 @@ while(a<=10);
     ```
 
 + *Example*:
-```
+```javascript
 for(var i=1; i<=5; i++) {
     console.log("Iteration "+i);
 }
@@ -403,12 +434,16 @@ for(var i=1; i<=5; i++) {
     }
     ```
 + *Example*:
-```
+```javascript
 var data=['apssdc','apssdc1','apssdc2','apssdc3']
 for (i in data){
-console.log(data[i]);
+console.log(data[i]); 
 }
+//for( var a in data){
+    here getting index values
+// }
 ```
+
 + **for ..of**:ES6 introduces a new **for ..of** loops over iterable objects such as arrays, strings, etc., Also, the code inside the loop is executed for each element of the iterable object
 
     + *syntax*:
@@ -418,7 +453,7 @@ console.log(data[i]);
     }
     ```
 + *Example*:
-```
+```javascript
 var a="APSSDC Welcome's you"
 for (i of a){
 console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
@@ -454,11 +489,11 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 
 #### DOM Manipulations:
 
-```<html>
+```javascript
 <body id='root'><body>
 
 <script>
-    var root=document.getElementById('root');
+var root=document.getElementById('root');
     var h2=document.createElement("h2"); // creating h2 element
     h2.textContent="Rajesh APSSDC"; //add some text 
     root.appendChild(h2);
@@ -468,7 +503,7 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + The above example we are creating **heading 2**  tag with some text on that it's appen to the root *ID*
 
 + i want to add a class/id to the **h2** tag
-```
+```html
 h2.classList.add("<classname>"); //add class name
 h2.setAttribute("id/class","<id/class name>"); // add either class name or Id name
 ```
@@ -519,13 +554,56 @@ document.write("The URL of this page is: " + window.location.href); // it's used
 
 + if you are playing x game. When the game is over the page would be restart/refresh
 
-```
+```javascript
 function gameover() {
     window.location.reload(true);
 }
 ```
 
-```window.history.back(); // its used for get back to previos pagewindow.history.go(0); // its used to reload the current page
+```javascript
+window.history.back(); // its used for get back to previos pagewindow.history.go(0); // its used to reload the current page
 window.history.forward(); // its used to navigate for next page
 ```
 + If you attempt to access the page that does not exist in the window's history then the methods back(), forward() and go() will simply do nothing
+
+---
+
+## JSON(JavaScript Object Notation):
+
++ JSON stands for **J**avaScript **O**bject **N**otation
++ JSON is extremely lightweight data-interchange format for data exchange between server and client which is quick and easy to parse and generate
++ JSON is also a text-based format that's easy to write and easy to understand for both humans and computer
++ JSON is based on two basic structures:
+    + Object
+    + Array
++ **Object**:
+    + This is defined as an unordered collection of key/value pairs `(i.e. key:value)`
+    + Each object begins with a left curly bracket `{` and ends with a right curly bracket `}`. Multiple key/value pairs are separated by a comma `,`
+
+    ```javascript
+    {
+    "book": {
+        "name": "Harry Potter and the Goblet of Fire",
+        "author": "J. K. Rowling",
+        "year": 2000,
+        "genre": "Fantasy Fiction",
+        "bestseller": true
+    }
+}
+    ```
+
++ **Array**: 
+    + This is defined as an ordered list of values.
+    + An array begins with a left bracket `[` and ends with a right bracket `]`. Values are separated by a comma `,`
+
+    ```Javascript
+    {
+    "fruits": [
+        "Apple",
+        "Banana",
+        "Strawberry",
+        "Mango"
+        ]
+    }
+    ```
+

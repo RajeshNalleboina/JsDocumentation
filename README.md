@@ -3,14 +3,22 @@
 
 ### Introduction:
 
-+ JavaScript is the most popular and widely used for client-side scripting language
-+ Client-side scripting refers to scripts that run within your web browser
-+ JavaScript is designed to add interactivity and dynamic effects to the web pages by manipulating the content
+
 + JavaScript was Invented by **Brendan Eich** during has time at **Netscape Communication**
+
 + JavaScript was originally developed as LiveScript by Netscape in the mid 1990s
+
 + It's first name is Netscape's Mocha. It's not much more popular. At that time Java is most popular programming language
-+ He desided to change the language name Mocha to JavaScript in 1995, and became an ECMA(European Computer Manufactures Association) standard in 1997.
+
++ He desided to change the language name Mocha to JavaScript in 1995, and became an ECMA(European Computer Manufactures Association) standard in 1997
+
 +  Now JavaScript is the standard client-side scripting language for web-based applications and Now it is supported by all web browsers available today, such as Google Chrome, Mozilla Firefox, Apple Safari, etc.
+
++ JavaScript is the most popular and widely used for client-side scripting language
+
++ Client-side scripting refers to scripts that run within your web browser
+
++ JavaScript is designed to add interactivity and dynamic effects to the web pages by manipulating the content
 
 + It is an object-oriented language, and it also has some similarities in syntax to Java programming language. But, JavaScript is not related to Java in any way
 
@@ -299,7 +307,7 @@ console.log("not valid");
     //code to execute if the condition_one is false
     }
     ```
-+ *Example*:
++ **Example**:
 ```javascript
 if (marks > 90 && marks <= 100){
 grade = 'A+';
@@ -315,7 +323,7 @@ grade='fail';
 }
 ```
 
-+ **Switch**:The switch case statement has an expression which is compared with values of each case statement and if a match is found, the associated code is executed.
++ **Switch**: The switch case statement has an expression which is compared with values of each case statement and if a match is found, the associated code is executed.
 
     + *Syntax*:
     ```javascript
@@ -385,7 +393,7 @@ a++;
 }
 ``` 
 
-+ **do while**:The do-while loop is a variant of the while loop, which evaluates the condition at the end of each loop iteration. With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is repeated as long as the specified condition evaluated to is true. 
++ **do while**: The do-while loop is a variant of the while loop, which evaluates the condition at the end of each loop iteration. With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is repeated as long as the specified condition evaluated to is true. 
 
 + **syntax**:
     ```javascript
@@ -419,7 +427,8 @@ while(a<=10);
     }
     ```
 
-+ *Example*:
++ **Example**:
+
 ```javascript
 for(var i=1; i<=5; i++) {
     console.log("Iteration "+i);
@@ -452,7 +461,7 @@ console.log(data[i]);
     // Code to be executed
     }
     ```
-+ *Example*:
++ **Example**:
 ```javascript
 var a="APSSDC Welcome's you"
 for (i of a){
@@ -467,9 +476,9 @@ console.log(i);  //A,P,S,S,D,C, ,W,e,l,c,o,m,e,',s, ,y,o,u
 + In the DOM, all parts of the document, such as elements, attributes, text, etc. are organized in a hierarchical tree-like structure; similar to a family tree in real life that consists of parents and children
 + DOM Tree depends on HTML
 
-+ *Example*:
++ **Example**:
 
-![image.png]tree.PNG)
+![image.png](tree.PNG)
 
 + The above diagram demonstrates the parent and chaild relationship between the nodes
 + ``<head>`` abd ``<body>`` elements are teh child nodes of ``<html>``.It's a parent node

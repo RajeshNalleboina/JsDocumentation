@@ -625,35 +625,6 @@ window.history.forward(); // its used to navigate for next page
         ]
     }
     ```
-**AJAX:**
 
-```javascript
-(function(){
-    function loadJSON(file, callback) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.overrideMimeType("application/json");
-      rawFile.open("GET", file, true);
-      rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-          callback(rawFile.responseText);
-        }
-      }
-      rawFile.send(null);
-    }
-    loadJSON ("index.json", function (text) {
-      let data = JSON.parse(text);
-      console.log(data);  
-    });
-    ```
 
-**Fetch API**:
 
-```javascript
-fetch('./index.json')
-  .then(response => {
-    return response.json()
-  })
-  .then(data => {
-      console.log(data);
-  }
-  ```
